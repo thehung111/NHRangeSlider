@@ -73,6 +73,7 @@ open class NHRangeSliderView: UIView {
     @IBInspectable open var lowerValue: Double = 0.0 {
         didSet {
             self.rangeSlider?.lowerValue = lowerValue
+            self.updateLabelDisplay()
         }
     }
     
@@ -80,6 +81,7 @@ open class NHRangeSliderView: UIView {
     @IBInspectable open var upperValue: Double = 100.0 {
         didSet {
             self.rangeSlider?.upperValue = upperValue
+            self.updateLabelDisplay()
         }
     }
     
@@ -207,7 +209,9 @@ open class NHRangeSliderView: UIView {
         
     }
     
-    // update label
+    //MARK: -
+    
+    // update labels display
     open func updateLabelDisplay() {
         
         self.lowerLabel?.text = String(format: self.displayStringFormat, rangeSlider!.lowerValue )
@@ -269,6 +273,29 @@ open class NHRangeSliderView: UIView {
                                             height: upperLabel.font.lineHeight + self.spacing )
             
         }
+        
+    }
+    
+    // return the best size that fit within the box
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
+        
+        if let titleLabel = self.titleLabel , let lowerLabel = self.lowerLabel {
+            
+            var height : CGFloat = 0
+            
+            var titleLabelMaxY : CGFloat = 0
+            
+            if !titleLabel.isHidden && titleLabel.text != nil && titleLabel.text!.characters.count > 0 {
+                titleLabelMaxY = titleLabel.font.lineHeight + self.spacing
+            }
+            
+            height = titleLabelMaxY + lowerLabel.font.lineHeight + self.spacing + thumbSize
+            
+            return CGSize(width: size.width, height: height)
+            
+        }
+        
+        return size
         
     }
     
