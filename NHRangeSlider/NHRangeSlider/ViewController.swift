@@ -15,11 +15,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // default slider
-        let sliderView = NHRangeSliderView(frame: CGRect(x: 8, y: 20, width: self.view.bounds.width - 8, height: 80) )
+        let sliderView = NHRangeSliderView(frame: CGRect(x: 16, y: 20, width: self.view.bounds.width - 32, height: 80) )
         sliderView.sizeToFit()
         self.view.addSubview(sliderView)
        
-        let sliderSquareView = NHRangeSliderView(frame: CGRect(x: 8, y: sliderView.frame.maxY + 8,
+        let sliderSquareView = NHRangeSliderView(frame: CGRect(x: 16, y: sliderView.frame.maxY + 8,
                                                                width: sliderView.frame.size.width,
                                                                height: sliderView.frame.size.height) )
         sliderSquareView.curvaceousness = 0.0
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         self.view.addSubview(sliderSquareView)
         
         
-        let sliderSquareWithLabelView = NHRangeSliderView(frame: CGRect(x: 8, y: sliderSquareView.frame.maxY + 8,
+        let sliderSquareWithLabelView = NHRangeSliderView(frame: CGRect(x: 16, y: sliderSquareView.frame.maxY + 8,
                                                                width: sliderView.frame.size.width,
                                                                height: sliderView.frame.size.height) )
         sliderSquareWithLabelView.curvaceousness = 0.0
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         self.view.addSubview(sliderSquareWithLabelView)
         
         // slider with labels following the text
-        let sliderWithLabelFollowView = NHRangeSliderView(frame: CGRect(x: 8, y: sliderSquareWithLabelView.frame.maxY + 8,
+        let sliderWithLabelFollowView = NHRangeSliderView(frame: CGRect(x: 16, y: sliderSquareWithLabelView.frame.maxY + 8,
                                                                         width: sliderView.frame.size.width,
                                                                         height: sliderView.frame.size.height) )
         sliderWithLabelFollowView.trackHighlightTintColor = UIColor.black

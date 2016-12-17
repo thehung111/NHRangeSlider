@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NHRangeSlider Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/NHRangeSlider" class="dashAnchor"></a>
+    <a title="NHRangeSlider Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NHRangeSlider Docs</a> (89% documented)</p>
+        <p class="header-right"><a href="https://github.com/thehung111/NHRangeSlider"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NHRangeSlider Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NHRangeSlider Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NHRangeSlider.html">NHRangeSlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NHRangeSliderView.html">NHRangeSliderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RangeSliderThumbLayer.html">RangeSliderThumbLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RangeSliderTrackLayer.html">RangeSliderTrackLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/NHSliderLabelStyle.html">NHSliderLabelStyle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/NHRangeSliderViewDelegate.html">NHRangeSliderViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NHRangeSlider</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">NHRangeSlider</span><span class="p">:</span> <span class="kt">UIControl</span></code></pre>
+
+                </div>
+              </div>
+            <p>Range slider view with upper, lower bounds</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/properties"></a>
+                <a name="//apple_ref/swift/Section/properties" class="dashAnchor"></a>
+                <a href="#/properties">
+                  <h3 class="section-name">properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider12minimumValueSd"></a>
+                    <a name="//apple_ref/swift/Property/minimumValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider12minimumValueSd">minimumValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>minimum value</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">minimumValue</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider12maximumValueSd"></a>
+                    <a name="//apple_ref/swift/Property/maximumValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider12maximumValueSd">maximumValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>max value</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">maximumValue</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">100.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider10lowerValueSd"></a>
+                    <a name="//apple_ref/swift/Property/lowerValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider10lowerValueSd">lowerValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>value for lower thumb</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">lowerValue</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider10upperValueSd"></a>
+                    <a name="//apple_ref/swift/Property/upperValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider10upperValueSd">upperValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>value for upper thumb</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">upperValue</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">100.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider16gapBetweenThumbsSd"></a>
+                    <a name="//apple_ref/swift/Property/gapBetweenThumbs" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider16gapBetweenThumbsSd">gapBetweenThumbs</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>minimum distance between the upper and lower thumbs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">gapBetweenThumbs</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">2.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider14trackTintColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/trackTintColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider14trackTintColorCSo7UIColor">trackTintColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>tint color for track between 2 thumbs</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">trackTintColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">white</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider23trackHighlightTintColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/trackHighlightTintColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider23trackHighlightTintColorCSo7UIColor">trackHighlightTintColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>track highlight tint color</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">trackHighlightTintColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.94</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider14thumbTintColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/thumbTintColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider14thumbTintColorCSo7UIColor">thumbTintColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>thumb tint color</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">thumbTintColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider16thumbBorderColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/thumbBorderColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider16thumbBorderColorCSo7UIColor">thumbBorderColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>thumb border color</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">thumbBorderColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">gray</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider16thumbBorderWidthV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/thumbBorderWidth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider16thumbBorderWidthV12CoreGraphics7CGFloat">thumbBorderWidth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>thumb border width</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">thumbBorderWidth</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.5</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider14curvaceousnessV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/curvaceousness" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider14curvaceousnessV12CoreGraphics7CGFloat">curvaceousness</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>set 0.0 for square thumbs to 1.0 for circle thumbs</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">curvaceousness</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider15lowerThumbLayerCS_21RangeSliderThumbLayer"></a>
+                    <a name="//apple_ref/swift/Property/lowerThumbLayer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider15lowerThumbLayerCS_21RangeSliderThumbLayer">lowerThumbLayer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>lower thumb layer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lowerThumbLayer</span> <span class="o">=</span> <span class="kt"><a href="../Classes/RangeSliderThumbLayer.html">RangeSliderThumbLayer</a></span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider15upperThumbLayerCS_21RangeSliderThumbLayer"></a>
+                    <a name="//apple_ref/swift/Property/upperThumbLayer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider15upperThumbLayerCS_21RangeSliderThumbLayer">upperThumbLayer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>upper thumb layer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">upperThumbLayer</span> <span class="o">=</span> <span class="kt"><a href="../Classes/RangeSliderThumbLayer.html">RangeSliderThumbLayer</a></span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider13NHRangeSlider5frameVSC6CGRect"></a>
+                    <a name="//apple_ref/swift/Property/frame" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider13NHRangeSlider5frameVSC6CGRect">frame</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>frame</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/init%20methods"></a>
+                <a name="//apple_ref/swift/Section/init methods" class="dashAnchor"></a>
+                <a href="#/init%20methods">
+                  <h3 class="section-name">init methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NHRangeSlider13NHRangeSlidercFT5coderCSo7NSCoder_GSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NHRangeSlider13NHRangeSlidercFT5coderCSo7NSCoder_GSqS0__">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">NHRangeSlider</span><span class="p">:</span> <span class="kt">UIControl</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/layers"></a>
+                <a name="//apple_ref/swift/Section/layers" class="dashAnchor"></a>
+                <a href="#/layers">
+                  <h3 class="section-name">layers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NHRangeSlider13NHRangeSlider15layoutSublayersFT2ofCSo7CALayer_T_"></a>
+                    <a name="//apple_ref/swift/Method/layoutSublayers(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NHRangeSlider13NHRangeSlider15layoutSublayersFT2ofCSo7CALayer_T_">layoutSublayers(of:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>layout sub layers</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter of: layer
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">layoutSublayers</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">CALayer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>of</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>layer</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NHRangeSlider13NHRangeSlider17updateLayerFramesFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/updateLayerFrames()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NHRangeSlider13NHRangeSlider17updateLayerFramesFT_T_">updateLayerFrames()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>update layer frames</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">updateLayerFrames</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NHRangeSlider13NHRangeSlider16positionForValueFSdSd"></a>
+                    <a name="//apple_ref/swift/Method/positionForValue(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NHRangeSlider13NHRangeSlider16positionForValueFSdSd">positionForValue(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>thumb x position for new value</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">positionForValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NHRangeSlider13NHRangeSlider10boundValueFTSd12toLowerValueSd10upperValueSd_Sd"></a>
+                    <a name="//apple_ref/swift/Method/boundValue(_:toLowerValue:upperValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NHRangeSlider13NHRangeSlider10boundValueFTSd12toLowerValueSd10upperValueSd_Sd">boundValue(_:toLowerValue:upperValue:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>bound new value within lower and upper value</p>
+
+<p><li>Parameters:</p>
+
+<p><ul>
+<li>value: value to set</li>
+<li>lowerValue: lower value</li>
+<li>upperValue: upper value</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    current value</p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">boundValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">toLowerValue</span> <span class="nv">lowerValue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">upperValue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>value to set</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lowerValue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>lower value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upperValue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>upper value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>current value</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Touches"></a>
+                <a name="//apple_ref/swift/Section/Touches" class="dashAnchor"></a>
+                <a href="#/Touches">
+                  <h3 class="section-name">Touches</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NHRangeSlider13NHRangeSlider13beginTrackingFTCSo7UITouch4withGSqCSo7UIEvent__Sb"></a>
+                    <a name="//apple_ref/swift/Method/beginTracking(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NHRangeSlider13NHRangeSlider13beginTrackingFTCSo7UITouch4withGSqCSo7UIEvent__Sb">beginTracking(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>begin tracking</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">beginTracking</span><span class="p">(</span><span class="n">_</span> <span class="nv">touch</span><span class="p">:</span> <span class="kt">UITouch</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NHRangeSlider13NHRangeSlider16continueTrackingFTCSo7UITouch4withGSqCSo7UIEvent__Sb"></a>
+                    <a name="//apple_ref/swift/Method/continueTracking(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NHRangeSlider13NHRangeSlider16continueTrackingFTCSo7UITouch4withGSqCSo7UIEvent__Sb">continueTracking(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>update positions for lower and upper thumbs</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">continueTracking</span><span class="p">(</span><span class="n">_</span> <span class="nv">touch</span><span class="p">:</span> <span class="kt">UITouch</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NHRangeSlider13NHRangeSlider11endTrackingFTGSqCSo7UITouch_4withGSqCSo7UIEvent__T_"></a>
+                    <a name="//apple_ref/swift/Method/endTracking(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NHRangeSlider13NHRangeSlider11endTrackingFTGSqCSo7UITouch_4withGSqCSo7UIEvent__T_">endTracking(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>end touch tracking. Unhighlight the two thumbs</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">endTracking</span><span class="p">(</span><span class="n">_</span> <span class="nv">touch</span><span class="p">:</span> <span class="kt">UITouch</span><span class="p">?,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/thehung111/NHRangeSlider" target="_blank" rel="external">Ngo Hung</a>. All rights reserved. (Last updated: 2016-12-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

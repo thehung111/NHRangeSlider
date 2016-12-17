@@ -8,11 +8,12 @@
 
 import UIKit
 
+/// enum for label positions
 public enum NHSliderLabelStyle : Int {
-    // lower and upper labels stick to the left and right of slider
+    /// lower and upper labels stick to the left and right of slider
     case STICKY
     
-    // lower and upper labels follow position of lower and upper thumbs
+    /// lower and upper labels follow position of lower and upper thumbs
     case FOLLOW
 }
 

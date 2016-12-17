@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NHRangeSlider  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="NHRangeSlider  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">NHRangeSlider Docs</a> (89% documented)</p>
+        <p class="header-right"><a href="https://github.com/thehung111/NHRangeSlider"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">NHRangeSlider Reference</a>
+        <img id="carat" src="img/carat.png" />
+        NHRangeSlider  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NHRangeSlider.html">NHRangeSlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NHRangeSliderView.html">NHRangeSliderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RangeSliderThumbLayer.html">RangeSliderThumbLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RangeSliderTrackLayer.html">RangeSliderTrackLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/NHSliderLabelStyle.html">NHSliderLabelStyle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/NHRangeSliderViewDelegate.html">NHRangeSliderViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#nhrangeslider' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='nhrangeslider'>NHRangeSlider</h1>
+
+<p><img src="http://img.shields.io/badge/swift-3.0-brightgreen.svg" alt="Swift">&nbsp;<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>&nbsp;<a href="https://github.com/thehung111/NHRangeSlider"><img src="https://img.shields.io/cocoapods/v/NHRangeSlider.svg" alt="CocoaPods"></a></p>
+
+<p>A custom range slider in Swift. Forked from <a href="https://github.com/warchimede/RangeSlider">RangeSlider</a> with some enhancements.</p>
+
+<p><img src="screenshot.png" /></p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+
+<ul>
+<li>iOS: 8.0+</li>
+<li>Xcode 8.1+</li>
+<li>Swift 3.0+</li>
+</ul>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>CocoaPods</h3>
+
+<blockquote>
+<p>CocoaPods 1.1.0+ is required to build NHRangeSlider.</p>
+</blockquote>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
+<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'10.0'</span>
+<span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">'NHRangeSlider'</span><span class="p">,</span> <span class="s1">'~&gt; 0.1'</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>You should change version 0.1 to the latest version of NHRangeSlider. The version numbers can be viewed under the current Github project tags.</p>
+
+<p>Then, run the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>pod install
+</code></pre>
+<a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='carthage'>Carthage</h3>
+
+<p>Put the following in your Cartfile:</p>
+<pre class="highlight plaintext"><code> github "thehung111/NHRangeSlider" ~&gt; 0.1
+</code></pre>
+
+<p>You should change version 0.1 to the latest version of NHRangeSlider. The version numbers can be viewed under the current Github project tags.</p>
+
+<p>Run <code>carthage update --platform iOS --no-use-binaries</code> </p>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
+<a href='#default-slider' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='default-slider'>Default Slider</h3>
+
+<p>By default, the title label is not shown and the left and right thumbs will be circles (<code>curvaceousness</code> set to 1). You can add the view in code or via story board:</p>
+<pre class="highlight swift"><code> <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+    <span class="c1">// default slider. Configure the frame</span>
+    <span class="k">let</span> <span class="nv">sliderView</span> <span class="o">=</span> <span class="kt">NHRangeSliderView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="mi">32</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">80</span><span class="p">)</span> <span class="p">)</span>
+    <span class="c1">// call size to fit to resize the height to fit exactly</span>
+    <span class="n">sliderView</span><span class="o">.</span><span class="nf">sizeToFit</span><span class="p">()</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">sliderView</span><span class="p">)</span>
+
+<span class="p">}</span>
+</code></pre>
+<a href='#slider-with-square-thumbs' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='slider-with-square-thumbs'>Slider with Square Thumbs</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sliderSquareView</span> <span class="o">=</span> <span class="kt">NHRangeSliderView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+
+<span class="c1">// set to 0 for square</span>
+<span class="n">sliderSquareView</span><span class="o">.</span><span class="n">curvaceousness</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">sliderSquareView</span><span class="o">.</span><span class="n">trackHighlightTintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">red</span>
+<span class="n">sliderSquareView</span><span class="o">.</span><span class="n">lowerValue</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">sliderSquareView</span><span class="o">.</span><span class="n">upperValue</span> <span class="o">=</span> <span class="mf">80.0</span>
+<span class="n">sliderSquareView</span><span class="o">.</span><span class="nf">sizeToFit</span><span class="p">()</span>
+<span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">sliderSquareView</span><span class="p">)</span>
+</code></pre>
+<a href='#slider-with-title' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='slider-with-title'>Slider with title</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sliderSquareWithLabelView</span> <span class="o">=</span> <span class="kt">NHRangeSliderView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">sliderSquareWithLabelView</span><span class="o">.</span><span class="n">curvaceousness</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">sliderSquareWithLabelView</span><span class="o">.</span><span class="n">trackHighlightTintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">brown</span>
+<span class="n">sliderSquareWithLabelView</span><span class="o">.</span><span class="n">lowerValue</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">sliderSquareWithLabelView</span><span class="o">.</span><span class="n">upperValue</span> <span class="o">=</span> <span class="mf">80.0</span>
+
+<span class="c1">// set title text</span>
+<span class="n">sliderSquareWithLabelView</span><span class="o">.</span><span class="n">titleLabel</span><span class="p">?</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"Slider with title label"</span>
+
+<span class="n">sliderSquareWithLabelView</span><span class="o">.</span><span class="nf">sizeToFit</span><span class="p">()</span>
+<span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">sliderSquareWithLabelView</span><span class="p">)</span>
+</code></pre>
+<a href='#slider-with-labels-following-thumbs' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='slider-with-labels-following-thumbs'>Slider with labels following thumbs</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sliderWithLabelFollowView</span> <span class="o">=</span> <span class="kt">NHRangeSliderView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">sliderWithLabelFollowView</span><span class="o">.</span><span class="n">trackHighlightTintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span>
+<span class="n">sliderWithLabelFollowView</span><span class="o">.</span><span class="n">lowerValue</span> <span class="o">=</span> <span class="mf">30.0</span>
+<span class="n">sliderWithLabelFollowView</span><span class="o">.</span><span class="n">upperValue</span> <span class="o">=</span> <span class="mf">70.0</span>
+<span class="n">sliderWithLabelFollowView</span><span class="o">.</span><span class="n">gapBetweenThumbs</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1">// set style to follow</span>
+<span class="n">sliderWithLabelFollowView</span><span class="o">.</span><span class="n">thumbLabelStyle</span> <span class="o">=</span> <span class="o">.</span><span class="kt">FOLLOW</span>
+
+<span class="n">sliderWithLabelFollowView</span><span class="o">.</span><span class="n">titleLabel</span><span class="p">?</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"Slider with labels follow thumbs"</span>
+<span class="n">sliderWithLabelFollowView</span><span class="o">.</span><span class="nf">sizeToFit</span><span class="p">()</span>
+<span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">sliderWithLabelFollowView</span><span class="p">)</span>
+</code></pre>
+<a href='#configuration' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='configuration'>Configuration</h2>
+
+<p>The range slider view (<strong>NHRangeSliderView</strong>) can be customized and information can be accessed through these properties :</p>
+
+<ul>
+<li><code>titleLabel</code> : label for title (optional)</li>
+<li><code>lowerLabel</code> : label for lower thumb</li>
+<li><code>upperLabel</code> : label for upper thumb</li>
+<li><code>minimumValue</code> : The minimum possible value of the range</li>
+<li><code>maximumValue</code> : The maximum possible value of the range</li>
+<li><code>lowerValue</code> : The value corresponding to the left thumb current position</li>
+<li><code>upperValue</code> : The value corresponding to the right thumb current position</li>
+<li><code>trackTintColor</code> : The track color</li>
+<li><code>trackHighlightTintColor</code> : The color of the section of the track located between the two thumbs</li>
+<li><code>thumbTintColor</code>: The thumb color</li>
+<li><code>thumbBorderColor</code>: The thumb border color</li>
+<li><code>thumbBorderWidth</code>: The width of the thumb border</li>
+<li><code>curvaceousness</code> : From 0.0 for square thumbs to 1.0 for circle thumbs</li>
+<li><code>displayStringFormat</code> : display format for lower and upper thumb values. Default to <code>%.0f</code> to display value as Int. Change this if you need to display decimal places.</li>
+<li><code>spacing</code> : vertical spacing between the labels and thumbs</li>
+<li><code>thumbLabelStyle</code> : position of thumb labels. Set to STICKY to stick to left and right positions. Set to FOLLOW to follow left and right thumbs</li>
+<li><code>gapBetweenThumbs</code> : minimum distance between thumbs</li>
+</ul>
+
+<p>To listen for value changes event, you can set the delegate (<code>NHRangeSliderViewDelegate</code>): sliderValueChanged(slider:)</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/thehung111/NHRangeSlider" target="_blank" rel="external">Ngo Hung</a>. All rights reserved. (Last updated: 2016-12-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
