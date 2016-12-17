@@ -138,6 +138,9 @@ The range slider view (**NHRangeSliderView**) can be customized and information 
 
   To listen for value changes event, you can set the delegate (`NHRangeSliderViewDelegate`): sliderValueChanged(slider:)
 
+## API Reference
+
+[https://thehung111.github.io/NHRangeSlider/](https://thehung111.github.io/NHRangeSlider/)
 
 
 
