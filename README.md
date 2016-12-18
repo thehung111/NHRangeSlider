@@ -1,5 +1,5 @@
 # NHRangeSlider
-![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)&nbsp;[![CocoaPods](https://img.shields.io/cocoapods/v/NHRangeSlider.svg)](https://github.com/thehung111/NHRangeSlider)
+![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)&nbsp;[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)&nbsp;[![CocoaPods](https://img.shields.io/cocoapods/v/NHRangeSlider.svg)](https://github.com/thehung111/NHRangeSlider)
 
 
 A custom range slider in Swift. Forked from [RangeSlider](https://github.com/warchimede/RangeSlider) with some enhancements.
@@ -24,20 +24,30 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'NHRangeSlider', '~> 0.1'
+    pod 'NHRangeSlider', '~> 0.1.1'
 end
 ```
-You should change version 0.1 to the latest version of NHRangeSlider. The version numbers can be viewed under the current Github project tags.
 
-Then, run the following command:
+Then, run the:
 
 ```bash
 $ pod install
 ```
 
+### Carthage
+
+Put the following in your Cartfile:
+
+```ogdl
+ github "thehung111/NHRangeSlider" ~> 0.1.1
+```
+ 
+Run `carthage update --platform iOS --no-use-binaries` 
+
+
 ### Manual
 
-You can just copy the 2 source files (NHRangeSlider and NHRangeSliderView) under NHRangeSlider/NHRangeSlider/Source folder into your project.
+You can just copy the 2 source files (NHRangeSlider and NHRangeSliderView) under NHRangeSlider/NHRangeSlider folder into your project.
 
 ## Usage
 
