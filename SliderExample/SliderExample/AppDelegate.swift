@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  NHRangeSlider
+//  SliderExample
 //
-//  Created by Hung on 17/12/16.
+//  Created by Hung on 18/12/16.
 //  Copyright © 2016 Hung. All rights reserved.
 //
 

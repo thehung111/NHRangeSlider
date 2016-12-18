@@ -1,15 +1,15 @@
 //
-//  NHRangeSliderTests.swift
-//  NHRangeSliderTests
+//  SliderExampleTests.swift
+//  SliderExampleTests
 //
 //  Created by Hung on 18/12/16.
 //  Copyright © 2016 Hung. All rights reserved.
 //
 
 import XCTest
-@testable import NHRangeSlider
+@testable import SliderExample
 
-class NHRangeSliderTests: XCTestCase {
+class SliderExampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

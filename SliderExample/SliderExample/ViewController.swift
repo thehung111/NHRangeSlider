@@ -1,12 +1,13 @@
 //
 //  ViewController.swift
-//  NHRangeSlider
+//  SliderExample
 //
-//  Created by Hung on 17/12/16.
+//  Created by Hung on 18/12/16.
 //  Copyright © 2016 Hung. All rights reserved.
 //
 
 import UIKit
+import NHRangeSlider
 
 class ViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class ViewController: UIViewController {
         let sliderView = NHRangeSliderView(frame: CGRect(x: 16, y: 20, width: self.view.bounds.width - 32, height: 80) )
         sliderView.sizeToFit()
         self.view.addSubview(sliderView)
-       
+        
         let sliderSquareView = NHRangeSliderView(frame: CGRect(x: 16, y: sliderView.frame.maxY + 8,
                                                                width: sliderView.frame.size.width,
                                                                height: sliderView.frame.size.height) )
@@ -31,8 +32,8 @@ class ViewController: UIViewController {
         
         
         let sliderSquareWithLabelView = NHRangeSliderView(frame: CGRect(x: 16, y: sliderSquareView.frame.maxY + 8,
-                                                               width: sliderView.frame.size.width,
-                                                               height: sliderView.frame.size.height) )
+                                                                        width: sliderView.frame.size.width,
+                                                                        height: sliderView.frame.size.height) )
         sliderSquareWithLabelView.curvaceousness = 0.0
         sliderSquareWithLabelView.trackHighlightTintColor = UIColor.brown
         sliderSquareWithLabelView.lowerValue = 20.0
@@ -53,7 +54,6 @@ class ViewController: UIViewController {
         sliderWithLabelFollowView.titleLabel?.text = "Slider with labels follow thumbs"
         sliderWithLabelFollowView.sizeToFit()
         self.view.addSubview(sliderWithLabelFollowView)
-        
         
     }
 

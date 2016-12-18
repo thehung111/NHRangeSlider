@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD9E53D01E05806C00A67D69"
-               BuildableName = "NHRangeSlider.app"
+               BlueprintIdentifier = "BDBEB3841E06606100FE2D6F"
+               BuildableName = "NHRangeSlider.framework"
                BlueprintName = "NHRangeSlider"
                ReferencedContainer = "container:NHRangeSlider.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD9E53E41E05806C00A67D69"
+               BlueprintIdentifier = "BDBEB38D1E06606100FE2D6F"
                BuildableName = "NHRangeSliderTests.xctest"
                BlueprintName = "NHRangeSliderTests"
                ReferencedContainer = "container:NHRangeSlider.xcodeproj">
@@ -42,8 +42,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD9E53D01E05806C00A67D69"
-            BuildableName = "NHRangeSlider.app"
+            BlueprintIdentifier = "BDBEB3841E06606100FE2D6F"
+            BuildableName = "NHRangeSlider.framework"
             BlueprintName = "NHRangeSlider"
             ReferencedContainer = "container:NHRangeSlider.xcodeproj">
          </BuildableReference>
@@ -61,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD9E53D01E05806C00A67D69"
-            BuildableName = "NHRangeSlider.app"
+            BlueprintIdentifier = "BDBEB3841E06606100FE2D6F"
+            BuildableName = "NHRangeSlider.framework"
             BlueprintName = "NHRangeSlider"
             ReferencedContainer = "container:NHRangeSlider.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD9E53D01E05806C00A67D69"
-            BuildableName = "NHRangeSlider.app"
+            BlueprintIdentifier = "BDBEB3841E06606100FE2D6F"
+            BuildableName = "NHRangeSlider.framework"
             BlueprintName = "NHRangeSlider"
             ReferencedContainer = "container:NHRangeSlider.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

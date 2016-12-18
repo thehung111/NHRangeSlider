@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "NHRangeSlider"
-  s.version      = "0.1"
+  s.version      = "0.1.1"
   s.summary      = "A custom range slider in Swift."
 
   s.description  = <<-DESC
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "NHRangeSlider/NHRangeSlider/Source/*.swift"
+  s.source_files  = "NHRangeSlider/NHRangeSlider/**/*.{h,swift}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
