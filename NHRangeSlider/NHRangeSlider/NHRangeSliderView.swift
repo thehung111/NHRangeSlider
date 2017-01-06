@@ -28,7 +28,7 @@ public extension NHRangeSliderViewDelegate{
     func sliderValueChanged(slider: NHRangeSlider?){}
 }
 
-/// Range slider with labels for upper and lower thumbs
+/// Range slider with labels for upper and lower thumbs, title label and configurable step value (optional)
 open class NHRangeSliderView: UIView {
 
     //MARK: properties
@@ -48,14 +48,18 @@ open class NHRangeSliderView: UIView {
     open var upperLabel : UILabel? = nil
     
     /// display format for lower and upper values. Default to %.0f to display value as Int
-    open var displayStringFormat: String = "%.0f"
+    open var displayStringFormat: String = "%.0f" {
+        didSet {
+            updateLabelDisplay()
+        }
+    }
     
     /// vertical spacing
     open var spacing: CGFloat = 4.0
     
     /// position of thumb labels. Set to STICKY to stick to left and right positions. Set to FOLLOW to follow left and right thumbs
     open var thumbLabelStyle: NHSliderLabelStyle = .STICKY
-
+    
     /// minimum value
     @IBInspectable open var minimumValue: Double = 0.0 {
         didSet {
@@ -218,8 +222,10 @@ open class NHRangeSliderView: UIView {
         self.lowerLabel?.text = String(format: self.displayStringFormat, rangeSlider!.lowerValue )
         self.upperLabel?.text = String(format: self.displayStringFormat, rangeSlider!.upperValue )
         
-        self.setNeedsLayout()
-        self.layoutIfNeeded()
+        if self.lowerLabel != nil {
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
+        }
     }
     
     /// layout subviews
@@ -254,8 +260,8 @@ open class NHRangeSliderView: UIView {
             
             
             if self.thumbLabelStyle == .FOLLOW {
-               lowerLabelX = rangeSlider.lowerThumbLayer.frame.minX  + self.spacing
-               upperLabelX = rangeSlider.upperThumbLayer.frame.minX  + self.spacing
+               lowerLabelX = rangeSlider.lowerThumbLayer.frame.midX  - lowerWidth / 2
+               upperLabelX = rangeSlider.upperThumbLayer.frame.midX  - upperWidth / 2
             }
             else {
                 // fix lower label to left and upper label to right

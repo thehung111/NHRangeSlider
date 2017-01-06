@@ -50,10 +50,28 @@ class ViewController: UIViewController {
         sliderWithLabelFollowView.lowerValue = 30.0
         sliderWithLabelFollowView.upperValue = 70.0
         sliderWithLabelFollowView.gapBetweenThumbs = 5
+        
         sliderWithLabelFollowView.thumbLabelStyle = .FOLLOW
         sliderWithLabelFollowView.titleLabel?.text = "Slider with labels follow thumbs"
         sliderWithLabelFollowView.sizeToFit()
         self.view.addSubview(sliderWithLabelFollowView)
+        
+        // custom string format example
+        let sliderCustomStringView = NHRangeSliderView(frame: CGRect(x: 16, y: sliderWithLabelFollowView.frame.maxY + 8,
+                                                                        width: sliderView.frame.size.width,
+                                                                        height: sliderView.frame.size.height) )
+        sliderCustomStringView.trackHighlightTintColor = UIColor.black
+        sliderCustomStringView.lowerValue = 30.0
+        sliderCustomStringView.upperValue = 70.0
+        sliderCustomStringView.gapBetweenThumbs = 5
+        
+        sliderCustomStringView.thumbLabelStyle = .FOLLOW
+        
+        sliderCustomStringView.titleLabel?.text = "Slider with custom format"
+        sliderCustomStringView.displayStringFormat = "Price: $%.1f"
+        sliderCustomStringView.sizeToFit()
+        self.view.addSubview(sliderCustomStringView)
+        
         
     }
 

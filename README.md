@@ -2,7 +2,7 @@
 ![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)&nbsp;[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)&nbsp;[![CocoaPods](https://img.shields.io/cocoapods/v/NHRangeSlider.svg)](https://github.com/thehung111/NHRangeSlider)
 
 
-A custom range slider in Swift. Forked from [RangeSlider](https://github.com/warchimede/RangeSlider) with some enhancements.
+A custom range slider in Swift. Well-documented with examples. Forked from [RangeSlider](https://github.com/warchimede/RangeSlider) with some enhancements.
 
 <img src="screenshot.png" />
 
@@ -24,7 +24,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'NHRangeSlider', '~> 0.1.1'
+    pod 'NHRangeSlider', '~> 0.1.2'
 end
 ```
 
@@ -39,7 +39,7 @@ $ pod install
 Put the following in your Cartfile:
 
 ```ogdl
- github "thehung111/NHRangeSlider" ~> 0.1.1
+ github "thehung111/NHRangeSlider" ~> 0.1.2
 ```
  
 Run `carthage update --platform iOS --no-use-binaries` 
@@ -114,6 +114,24 @@ sliderWithLabelFollowView.thumbLabelStyle = .FOLLOW
 sliderWithLabelFollowView.titleLabel?.text = "Slider with labels follow thumbs"
 sliderWithLabelFollowView.sizeToFit()
 self.view.addSubview(sliderWithLabelFollowView)
+```
+
+### Slider with custom format
+
+```swift
+let sliderCustomStringView = NHRangeSliderView(frame: ...)
+sliderCustomStringView.trackHighlightTintColor = UIColor.black
+sliderCustomStringView.lowerValue = 30.0
+sliderCustomStringView.upperValue = 70.0
+sliderCustomStringView.gapBetweenThumbs = 5
+    
+sliderCustomStringView.thumbLabelStyle = .FOLLOW
+    
+sliderCustomStringView.titleLabel?.text = "Slider with custom format"
+sliderCustomStringView.displayStringFormat = "Price: $%.1f"
+sliderCustomStringView.sizeToFit()
+self.view.addSubview(sliderCustomStringView)
+
 ```
 
 ## Configuration

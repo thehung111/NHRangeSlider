@@ -491,6 +491,7 @@
 				BDBEB3CB1E0660E200FE2D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDBEB3CC1E0660E200FE2D6F /* Build configuration list for PBXNativeTarget "SliderExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +500,7 @@
 				BDBEB3CE1E0660E200FE2D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

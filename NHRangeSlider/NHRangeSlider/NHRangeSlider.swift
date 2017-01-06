@@ -158,7 +158,6 @@ open class NHRangeSlider: UIControl {
         }
     }
     
-    
     /// track highlight tint color
     @IBInspectable open var trackHighlightTintColor: UIColor = UIColor(red: 0.0, green: 0.45, blue: 0.94, alpha: 1.0) {
         didSet {
@@ -343,6 +342,8 @@ open class NHRangeSlider: UIControl {
         if (bounds.width != bounds.height) {
             deltaValue = (maximumValue - minimumValue) * deltaLocation / Double(bounds.width - bounds.height)
         }
+        
+        
         previouslocation = location
         
         // if both are highlighted. we need to decide which direction to drag
