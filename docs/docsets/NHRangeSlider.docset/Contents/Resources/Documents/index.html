@@ -70,7 +70,7 @@
 
 <p><img src="http://img.shields.io/badge/swift-3.0-brightgreen.svg" alt="Swift">&nbsp;<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>&nbsp;<a href="https://github.com/thehung111/NHRangeSlider"><img src="https://img.shields.io/cocoapods/v/NHRangeSlider.svg" alt="CocoaPods"></a></p>
 
-<p>A custom range slider in Swift. Forked from <a href="https://github.com/warchimede/RangeSlider">RangeSlider</a> with some enhancements.</p>
+<p>A custom range slider in Swift. Well-documented with examples. Forked from <a href="https://github.com/warchimede/RangeSlider">RangeSlider</a> with some enhancements.</p>
 
 <p><img src="screenshot.png" /></p>
 <a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
@@ -91,7 +91,7 @@
 <span class="n">use_frameworks!</span>
 
 <span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'NHRangeSlider'</span><span class="p">,</span> <span class="s1">'~&gt; 0.1.1'</span>
+    <span class="n">pod</span> <span class="s1">'NHRangeSlider'</span><span class="p">,</span> <span class="s1">'~&gt; 0.2'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -101,7 +101,7 @@
 <a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='carthage'>Carthage</h3>
 
 <p>Put the following in your Cartfile:</p>
-<pre class="highlight plaintext"><code> github "thehung111/NHRangeSlider" ~&gt; 0.1.1
+<pre class="highlight plaintext"><code> github "thehung111/NHRangeSlider" ~&gt; 0.2
 </code></pre>
 
 <p>Run <code>carthage update --platform iOS --no-use-binaries</code> </p>
@@ -162,6 +162,28 @@
 <span class="n">sliderWithLabelFollowView</span><span class="o">.</span><span class="nf">sizeToFit</span><span class="p">()</span>
 <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">sliderWithLabelFollowView</span><span class="p">)</span>
 </code></pre>
+<a href='#slider-with-custom-format' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='slider-with-custom-format'>Slider with custom format</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sliderCustomStringView</span> <span class="o">=</span> <span class="kt">NHRangeSliderView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="n">trackHighlightTintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span>
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="n">lowerValue</span> <span class="o">=</span> <span class="mf">30.0</span>
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="n">upperValue</span> <span class="o">=</span> <span class="mf">70.0</span>
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="n">stepValue</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="n">gapBetweenThumbs</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="n">thumbLabelStyle</span> <span class="o">=</span> <span class="o">.</span><span class="kt">FOLLOW</span>
+
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="n">titleLabel</span><span class="p">?</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"Stepped slider with custom format"</span>
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="n">lowerDisplayStringFormat</span> <span class="o">=</span> <span class="s">"Min: $%.0f"</span>
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="n">upperDisplayStringFormat</span> <span class="o">=</span> <span class="s">"Max: $%.0f"</span>
+<span class="n">sliderCustomStringView</span><span class="o">.</span><span class="nf">sizeToFit</span><span class="p">()</span>
+<span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">sliderCustomStringView</span><span class="p">)</span>
+
+</code></pre>
+<a href='#stepped-slider' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='stepped-slider'>Stepped Slider</h3>
+
+<p>Handle stepped values. The slider will snap to discrete points (after dragging stopped) along the slider based on the stepped value.</p>
+<pre class="highlight swift"><code><span class="n">sliderSquareWithLabelView</span><span class="o">.</span><span class="n">stepValue</span> <span class="o">=</span> <span class="mf">5.0</span>
+</code></pre>
 <a href='#configuration' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='configuration'>Configuration</h2>
 
 <p>The range slider view (<strong>NHRangeSliderView</strong>) can be customized and information can be accessed through these properties :</p>
@@ -174,13 +196,15 @@
 <li><code>maximumValue</code> : The maximum possible value of the range</li>
 <li><code>lowerValue</code> : The value corresponding to the left thumb current position</li>
 <li><code>upperValue</code> : The value corresponding to the right thumb current position</li>
+<li><code>stepValue</code> : If set, will snap to discrete step points along the slider . Default to nil.</li>
 <li><code>trackTintColor</code> : The track color</li>
 <li><code>trackHighlightTintColor</code> : The color of the section of the track located between the two thumbs</li>
 <li><code>thumbTintColor</code>: The thumb color</li>
 <li><code>thumbBorderColor</code>: The thumb border color</li>
 <li><code>thumbBorderWidth</code>: The width of the thumb border</li>
 <li><code>curvaceousness</code> : From 0.0 for square thumbs to 1.0 for circle thumbs</li>
-<li><code>displayStringFormat</code> : display format for lower and upper thumb values. Default to <code>%.0f</code> to display value as Int. Change this if you need to display decimal places.</li>
+<li><code>lowerDisplayStringFormat</code> : display format for lower thumb value. Default to <code>%.0f</code> to display value as Int. Change this if you need to display decimal places or want a different label.</li>
+<li><code>upperDisplayStringFormat</code> : display format for upper thumb value. Default to <code>%.0f</code> to display value as Int. Change this if you need to display decimal places or want a different label.</li>
 <li><code>spacing</code> : vertical spacing between the labels and thumbs</li>
 <li><code>thumbLabelStyle</code> : position of thumb labels. Set to STICKY to stick to left and right positions. Set to FOLLOW to follow left and right thumbs</li>
 <li><code>gapBetweenThumbs</code> : minimum distance between thumbs</li>
@@ -194,7 +218,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/thehung111/NHRangeSlider" target="_blank" rel="external">Ngo Hung</a>. All rights reserved. (Last updated: 2016-12-18)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/thehung111/NHRangeSlider" target="_blank" rel="external">Ngo Hung</a>. All rights reserved. (Last updated: 2017-01-07)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

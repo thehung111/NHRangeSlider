@@ -2,7 +2,7 @@
   "warnings": [
     {
       "file": "/Users/visenze/Desktop/xcode_workspace/NHRangeSlider/NHRangeSlider/NHRangeSlider/NHRangeSlider.swift",
-      "line": 243,
+      "line": 263,
       "symbol": "NHRangeSlider.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -23,28 +23,28 @@
     },
     {
       "file": "/Users/visenze/Desktop/xcode_workspace/NHRangeSlider/NHRangeSlider/NHRangeSlider/NHRangeSliderView.swift",
-      "line": 155,
+      "line": 173,
       "symbol": "NHRangeSliderView.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/visenze/Desktop/xcode_workspace/NHRangeSlider/NHRangeSlider/NHRangeSlider/NHRangeSliderView.swift",
-      "line": 161,
+      "line": 179,
       "symbol": "NHRangeSliderView.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/visenze/Desktop/xcode_workspace/NHRangeSlider/NHRangeSlider/NHRangeSlider/NHRangeSliderView.swift",
-      "line": 216,
+      "line": 234,
       "symbol": "NHRangeSliderView.updateLabelDisplay()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/visenze/Desktop/xcode_workspace/NHRangeSlider/NHRangeSlider/NHRangeSlider/NHRangeSliderView.swift",
-      "line": 281,
+      "line": 310,
       "symbol": "NHRangeSliderView.sizeThatFits(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

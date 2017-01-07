@@ -73,7 +73,7 @@
 
                 </div>
               </div>
-            <p>Range slider with labels for upper and lower thumbs</p>
+            <p>Range slider with labels for upper and lower thumbs, title label and configurable step value (optional)</p>
 
           </section>
           <section class="section task-group-section">
@@ -224,9 +224,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC13NHRangeSlider17NHRangeSliderView19displayStringFormatSS"></a>
-                    <a name="//apple_ref/swift/Property/displayStringFormat" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC13NHRangeSlider17NHRangeSliderView19displayStringFormatSS">displayStringFormat</a>
+                    <a name="/s:vC13NHRangeSlider17NHRangeSliderView24lowerDisplayStringFormatSS"></a>
+                    <a name="//apple_ref/swift/Property/lowerDisplayStringFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider17NHRangeSliderView24lowerDisplayStringFormatSS">lowerDisplayStringFormat</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -234,14 +234,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>display format for lower and upper values. Default to %.0f to display value as Int</p>
+                        <p>display format for lower value. Default to %.0f to display value as Int</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">displayStringFormat</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"%.0f"</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">lowerDisplayStringFormat</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"%.0f"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider17NHRangeSliderView24upperDisplayStringFormatSS"></a>
+                    <a name="//apple_ref/swift/Property/upperDisplayStringFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider17NHRangeSliderView24upperDisplayStringFormatSS">upperDisplayStringFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>display format for upper value. Default to %.0f to display value as Int</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">upperDisplayStringFormat</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"%.0f"</span></code></pre>
 
                         </div>
                       </div>
@@ -404,6 +431,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">upperValue</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">100.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NHRangeSlider17NHRangeSliderView9stepValueGSqSd_"></a>
+                    <a name="//apple_ref/swift/Property/stepValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NHRangeSlider17NHRangeSliderView9stepValueGSqSd_">stepValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>stepValue. If set, will snap to discrete step points along the slider . Default to nil</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">stepValue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
 
                         </div>
                       </div>
@@ -873,7 +927,7 @@ Selected value for filterItem will also be updated</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/thehung111/NHRangeSlider" target="_blank" rel="external">Ngo Hung</a>. All rights reserved. (Last updated: 2016-12-18)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/thehung111/NHRangeSlider" target="_blank" rel="external">Ngo Hung</a>. All rights reserved. (Last updated: 2017-01-07)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

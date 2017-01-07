@@ -24,7 +24,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'NHRangeSlider', '~> 0.1.2'
+    pod 'NHRangeSlider', '~> 0.2'
 end
 ```
 
@@ -39,7 +39,7 @@ $ pod install
 Put the following in your Cartfile:
 
 ```ogdl
- github "thehung111/NHRangeSlider" ~> 0.1.2
+ github "thehung111/NHRangeSlider" ~> 0.2
 ```
  
 Run `carthage update --platform iOS --no-use-binaries` 
