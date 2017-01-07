@@ -148,6 +148,27 @@ open class NHRangeSlider: UIControl {
         }
     }
     
+    
+    /// stepValue. If set, will snap to discrete step points along the slider . Default to nil
+    @IBInspectable open var stepValue: Double? = nil {
+        willSet(newValue) {
+            if newValue != nil {
+                assert(newValue! > 0, "NHRangeSlider: stepValue must be positive")
+            }
+        }
+        didSet {
+            if let val = stepValue {
+                if val <= 0 {
+                    stepValue = nil
+                }
+            }
+            
+            updateLayerFrames()
+        }
+    }
+
+    
+    
     /// minimum distance between the upper and lower thumbs.
     @IBInspectable open var gapBetweenThumbs: Double = 2.0
     
@@ -368,7 +389,10 @@ open class NHRangeSlider: UIControl {
             }
         }
         
-        sendActions(for: .valueChanged)
+        // only send changed value if stepValue is not set. We will trigger this later in endTracking
+        if stepValue == nil {
+            sendActions(for: .valueChanged)
+        }
         
         return true
     }
@@ -377,5 +401,15 @@ open class NHRangeSlider: UIControl {
     override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         lowerThumbLayer.highlighted = false
         upperThumbLayer.highlighted = false
+        
+        // let slider snap after user stop dragging
+        if let stepValue = stepValue {
+            lowerValue = round(lowerValue / stepValue) * stepValue
+            upperValue = round(upperValue / stepValue) * stepValue
+            sendActions(for: .valueChanged)
+        }
+        
+        
     }
+    
 }

@@ -123,15 +123,25 @@ let sliderCustomStringView = NHRangeSliderView(frame: ...)
 sliderCustomStringView.trackHighlightTintColor = UIColor.black
 sliderCustomStringView.lowerValue = 30.0
 sliderCustomStringView.upperValue = 70.0
-sliderCustomStringView.gapBetweenThumbs = 5
+sliderCustomStringView.stepValue = 10
+sliderCustomStringView.gapBetweenThumbs = 10
     
 sliderCustomStringView.thumbLabelStyle = .FOLLOW
     
-sliderCustomStringView.titleLabel?.text = "Slider with custom format"
-sliderCustomStringView.displayStringFormat = "Price: $%.1f"
+sliderCustomStringView.titleLabel?.text = "Stepped slider with custom format"
+sliderCustomStringView.lowerDisplayStringFormat = "Min: $%.0f"
+sliderCustomStringView.upperDisplayStringFormat = "Max: $%.0f"
 sliderCustomStringView.sizeToFit()
 self.view.addSubview(sliderCustomStringView)
 
+```
+
+### Stepped Slider
+
+Handle stepped values. The slider will snap to discrete points (after dragging stopped) along the slider based on the stepped value.
+
+```swift
+sliderSquareWithLabelView.stepValue = 5.0
 ```
 
 ## Configuration
@@ -145,13 +155,15 @@ The range slider view (**NHRangeSliderView**) can be customized and information 
   + `maximumValue` : The maximum possible value of the range
   + `lowerValue` : The value corresponding to the left thumb current position
   + `upperValue` : The value corresponding to the right thumb current position
+  + `stepValue` : If set, will snap to discrete step points along the slider . Default to nil.
   + `trackTintColor` : The track color
   + `trackHighlightTintColor` : The color of the section of the track located between the two thumbs
   + `thumbTintColor`: The thumb color
   + `thumbBorderColor`: The thumb border color
   + `thumbBorderWidth`: The width of the thumb border
   + `curvaceousness` : From 0.0 for square thumbs to 1.0 for circle thumbs
-  + `displayStringFormat` : display format for lower and upper thumb values. Default to `%.0f` to display value as Int. Change this if you need to display decimal places.
+  + `lowerDisplayStringFormat` : display format for lower thumb value. Default to `%.0f` to display value as Int. Change this if you need to display decimal places or want a different label.
+  + `upperDisplayStringFormat` : display format for upper thumb value. Default to `%.0f` to display value as Int. Change this if you need to display decimal places or want a different label.
   + `spacing` : vertical spacing between the labels and thumbs
   + `thumbLabelStyle` : position of thumb labels. Set to STICKY to stick to left and right positions. Set to FOLLOW to follow left and right thumbs 
   + `gapBetweenThumbs` : minimum distance between thumbs

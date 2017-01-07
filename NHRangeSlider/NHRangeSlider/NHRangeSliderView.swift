@@ -47,8 +47,15 @@ open class NHRangeSliderView: UIView {
     /// upper value label for displaying selected upper value
     open var upperLabel : UILabel? = nil
     
-    /// display format for lower and upper values. Default to %.0f to display value as Int
-    open var displayStringFormat: String = "%.0f" {
+    /// display format for lower value. Default to %.0f to display value as Int
+    open var lowerDisplayStringFormat: String = "%.0f" {
+        didSet {
+            updateLabelDisplay()
+        }
+    }
+    
+    /// display format for upper value. Default to %.0f to display value as Int
+    open var upperDisplayStringFormat: String = "%.0f" {
         didSet {
             updateLabelDisplay()
         }
@@ -87,6 +94,13 @@ open class NHRangeSliderView: UIView {
         didSet {
             self.rangeSlider?.upperValue = upperValue
             self.updateLabelDisplay()
+        }
+    }
+    
+    /// stepValue. If set, will snap to discrete step points along the slider . Default to nil
+    @IBInspectable open var stepValue: Double? = nil {
+        didSet {
+            self.rangeSlider?.stepValue = stepValue
         }
     }
     
@@ -219,12 +233,21 @@ open class NHRangeSliderView: UIView {
     // update labels display
     open func updateLabelDisplay() {
         
-        self.lowerLabel?.text = String(format: self.displayStringFormat, rangeSlider!.lowerValue )
-        self.upperLabel?.text = String(format: self.displayStringFormat, rangeSlider!.upperValue )
+        self.lowerLabel?.text = String(format: self.lowerDisplayStringFormat, rangeSlider!.lowerValue )
+        self.upperLabel?.text = String(format: self.upperDisplayStringFormat, rangeSlider!.upperValue )
         
         if self.lowerLabel != nil {
-            self.setNeedsLayout()
-            self.layoutIfNeeded()
+            
+            // for stepped value we animate the labels
+            if self.stepValue != nil && self.thumbLabelStyle == .FOLLOW {
+                UIView.animate(withDuration: 0.1, animations: {
+                     self.layoutSubviews()
+                })
+            }
+            else {
+                self.setNeedsLayout()
+                self.layoutIfNeeded()
+            }
         }
     }
     

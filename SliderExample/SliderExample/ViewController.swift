@@ -38,7 +38,8 @@ class ViewController: UIViewController {
         sliderSquareWithLabelView.trackHighlightTintColor = UIColor.brown
         sliderSquareWithLabelView.lowerValue = 20.0
         sliderSquareWithLabelView.upperValue = 80.0
-        sliderSquareWithLabelView.titleLabel?.text = "Slider with title label"
+        sliderSquareWithLabelView.stepValue = 5.0
+        sliderSquareWithLabelView.titleLabel?.text = "Slider with title label and step value (5)"
         sliderSquareWithLabelView.sizeToFit()
         self.view.addSubview(sliderSquareWithLabelView)
         
@@ -63,12 +64,15 @@ class ViewController: UIViewController {
         sliderCustomStringView.trackHighlightTintColor = UIColor.black
         sliderCustomStringView.lowerValue = 30.0
         sliderCustomStringView.upperValue = 70.0
-        sliderCustomStringView.gapBetweenThumbs = 5
+        sliderCustomStringView.stepValue = 10
+        sliderCustomStringView.gapBetweenThumbs = 10
         
         sliderCustomStringView.thumbLabelStyle = .FOLLOW
         
-        sliderCustomStringView.titleLabel?.text = "Slider with custom format"
-        sliderCustomStringView.displayStringFormat = "Price: $%.1f"
+        sliderCustomStringView.titleLabel?.text = "Stepped slider with custom format"
+        sliderCustomStringView.lowerDisplayStringFormat = "Min: $%.0f"
+        sliderCustomStringView.upperDisplayStringFormat = "Max: $%.0f"
+        
         sliderCustomStringView.sizeToFit()
         self.view.addSubview(sliderCustomStringView)
         
