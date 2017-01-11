@@ -255,7 +255,7 @@ open class NHRangeSlider: UIControl {
     }
     
     //MARK: init methods
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         initializeLayers()
     }
