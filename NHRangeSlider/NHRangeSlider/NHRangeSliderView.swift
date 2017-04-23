@@ -30,7 +30,7 @@ public extension NHRangeSliderViewDelegate{
 
 /// Range slider with labels for upper and lower thumbs, title label and configurable step value (optional)
 open class NHRangeSliderView: UIView {
-
+    
     //MARK: properties
     
     open var delegate: NHRangeSliderViewDelegate? = nil
@@ -118,6 +118,12 @@ open class NHRangeSliderView: UIView {
         }
     }
     
+    // track Line thickness
+    @IBInspectable open var thickness: CGFloat = 2.0 {
+        didSet {
+            self.rangeSlider?.thickness = thickness
+        }
+    }
     
     /// track highlight tint color
     @IBInspectable open var trackHighlightTintColor: UIColor = UIColor(red: 0.0, green: 0.45, blue: 0.94, alpha: 1.0) {
@@ -146,7 +152,7 @@ open class NHRangeSliderView: UIView {
     @IBInspectable open var thumbBorderWidth: CGFloat = 0.5 {
         didSet {
             self.rangeSlider?.thumbBorderWidth = thumbBorderWidth
-
+            
         }
     }
     
@@ -221,7 +227,7 @@ open class NHRangeSliderView: UIView {
     ///
     /// - Parameter rangeSlider: the changed rangeSlider
     open func rangeSliderValueChanged(_ rangeSlider: NHRangeSlider) {
-       
+        
         delegate?.sliderValueChanged(slider: rangeSlider)
         
         self.updateLabelDisplay()
@@ -241,7 +247,7 @@ open class NHRangeSliderView: UIView {
             // for stepped value we animate the labels
             if self.stepValue != nil && self.thumbLabelStyle == .FOLLOW {
                 UIView.animate(withDuration: 0.1, animations: {
-                     self.layoutSubviews()
+                    self.layoutSubviews()
                 })
             }
             else {
@@ -274,7 +280,7 @@ open class NHRangeSliderView: UIView {
                                        y: titleLabelMaxY + lowerLabel.font.lineHeight + self.spacing,
                                        width: commonWidth ,
                                        height: thumbSize )
-
+            
             let lowerWidth = self.estimatelabelSize(font: lowerLabel.font, string: lowerLabel.text!, constrainedToWidth: Double(commonWidth)).width
             let upperWidth = self.estimatelabelSize(font: upperLabel.font, string: upperLabel.text!, constrainedToWidth: Double(commonWidth)).width
             
@@ -283,8 +289,8 @@ open class NHRangeSliderView: UIView {
             
             
             if self.thumbLabelStyle == .FOLLOW {
-               lowerLabelX = rangeSlider.lowerThumbLayer.frame.midX  - lowerWidth / 2
-               upperLabelX = rangeSlider.upperThumbLayer.frame.midX  - upperWidth / 2
+                lowerLabelX = rangeSlider.lowerThumbLayer.frame.midX  - lowerWidth / 2
+                upperLabelX = rangeSlider.upperThumbLayer.frame.midX  - upperWidth / 2
             }
             else {
                 // fix lower label to left and upper label to right
@@ -341,8 +347,8 @@ open class NHRangeSliderView: UIView {
                                    options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                    attributes: [NSFontAttributeName: font],
                                    context: nil).size
-
+        
     }
     
-
+    
 }
