@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         let sliderSquareView = NHRangeSliderView(frame: CGRect(x: 16, y: sliderView.frame.maxY + 8,
                                                                width: sliderView.frame.size.width,
                                                                height: sliderView.frame.size.height) )
+        sliderSquareView.thickness = 10.0
         sliderSquareView.curvaceousness = 0.0
         sliderSquareView.trackHighlightTintColor = UIColor.red
         sliderSquareView.lowerValue = 20.0
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
         let sliderSquareWithLabelView = NHRangeSliderView(frame: CGRect(x: 16, y: sliderSquareView.frame.maxY + 8,
                                                                         width: sliderView.frame.size.width,
                                                                         height: sliderView.frame.size.height) )
+        sliderSquareWithLabelView.thickness = 8.0
         sliderSquareWithLabelView.curvaceousness = 0.0
         sliderSquareWithLabelView.trackHighlightTintColor = UIColor.brown
         sliderSquareWithLabelView.lowerValue = 20.0
@@ -47,6 +49,7 @@ class ViewController: UIViewController {
         let sliderWithLabelFollowView = NHRangeSliderView(frame: CGRect(x: 16, y: sliderSquareWithLabelView.frame.maxY + 8,
                                                                         width: sliderView.frame.size.width,
                                                                         height: sliderView.frame.size.height) )
+        sliderWithLabelFollowView.thickness = 4.0
         sliderWithLabelFollowView.trackHighlightTintColor = UIColor.black
         sliderWithLabelFollowView.lowerValue = 30.0
         sliderWithLabelFollowView.upperValue = 70.0

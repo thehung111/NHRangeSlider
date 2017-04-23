@@ -22,10 +22,18 @@ public class RangeSliderTrackLayer: CALayer {
         guard let slider = rangeSlider else {
             return
         }
+        let lowerValuePosition = CGFloat(slider.positionForValue(slider.lowerValue))
+        let upperValuePosition = CGFloat(slider.positionForValue(slider.upperValue))
+        
+        let frame = CGRect(x: 0,
+                           y: bounds.height/2-slider.thickness/2,
+                           width: bounds.width,
+                           height: slider.thickness)
+        
         
         // Clip
-        let cornerRadius = bounds.height * slider.curvaceousness / 2.0
-        let path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
+        let cornerRadius = frame.height * slider.curvaceousness / 2.0
+        let path = UIBezierPath(roundedRect: frame, cornerRadius: cornerRadius)
         ctx.addPath(path.cgPath)
         
         // Fill the track
@@ -35,9 +43,7 @@ public class RangeSliderTrackLayer: CALayer {
         
         // Fill the highlighted range
         ctx.setFillColor(slider.trackHighlightTintColor.cgColor)
-        let lowerValuePosition = CGFloat(slider.positionForValue(slider.lowerValue))
-        let upperValuePosition = CGFloat(slider.positionForValue(slider.upperValue))
-        let rect = CGRect(x: lowerValuePosition, y: 0.0, width: upperValuePosition - lowerValuePosition, height: bounds.height)
+        let rect = CGRect(x: lowerValuePosition, y: bounds.height/2-slider.thickness/2, width: upperValuePosition - lowerValuePosition, height: slider.thickness)
         ctx.fill(rect)
     }
 }
@@ -166,8 +172,13 @@ open class NHRangeSlider: UIControl {
             updateLayerFrames()
         }
     }
-
     
+    // track Line thickness
+    @IBInspectable open var thickness: CGFloat = 2.0 {
+        didSet {
+            trackLayer.setNeedsDisplay()
+        }
+    }
     
     /// minimum distance between the upper and lower thumbs.
     @IBInspectable open var gapBetweenThumbs: Double = 2.0
