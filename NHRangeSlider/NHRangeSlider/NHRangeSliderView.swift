@@ -337,7 +337,7 @@ open class NHRangeSliderView: UIView {
     ///
     /// - returns: string size for constrained width
     private func estimatelabelSize(font: UIFont,string: String, constrainedToWidth width: Double) -> CGSize{
-        return string.boundingRect(with: CGSize(width: width, height: DBL_MAX),
+        return string.boundingRect(with: CGSize(width: width, height: .greatestFiniteMagnitude),
                                    options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                    attributes: [NSFontAttributeName: font],
                                    context: nil).size
