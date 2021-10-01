@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF6E9A332707653B00FAF57C /* NHRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6E9A312707653B00FAF57C /* NHRangeSlider.swift */; };
+		AF6E9A342707653B00FAF57C /* NHRangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6E9A322707653B00FAF57C /* NHRangeSliderView.swift */; };
 		BDBEB38F1E06606100FE2D6F /* NHRangeSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBEB3851E06606100FE2D6F /* NHRangeSlider.framework */; };
 		BDBEB3941E06606100FE2D6F /* NHRangeSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBEB3931E06606100FE2D6F /* NHRangeSliderTests.swift */; };
 		BDBEB3961E06606100FE2D6F /* NHRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = BDBEB3881E06606100FE2D6F /* NHRangeSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDBEB3A11E06608900FE2D6F /* NHRangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBEB39F1E06608900FE2D6F /* NHRangeSliderView.swift */; };
-		BDBEB3A21E06608900FE2D6F /* NHRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBEB3A01E06608900FE2D6F /* NHRangeSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,14 +25,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF6E9A312707653B00FAF57C /* NHRangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRangeSlider.swift; sourceTree = "<group>"; };
+		AF6E9A322707653B00FAF57C /* NHRangeSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRangeSliderView.swift; sourceTree = "<group>"; };
 		BDBEB3851E06606100FE2D6F /* NHRangeSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NHRangeSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBEB3881E06606100FE2D6F /* NHRangeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NHRangeSlider.h; sourceTree = "<group>"; };
 		BDBEB3891E06606100FE2D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDBEB38E1E06606100FE2D6F /* NHRangeSliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NHRangeSliderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBEB3931E06606100FE2D6F /* NHRangeSliderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHRangeSliderTests.swift; sourceTree = "<group>"; };
 		BDBEB3951E06606100FE2D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDBEB39F1E06608900FE2D6F /* NHRangeSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRangeSliderView.swift; sourceTree = "<group>"; };
-		BDBEB3A01E06608900FE2D6F /* NHRangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRangeSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +75,8 @@
 		BDBEB3871E06606100FE2D6F /* NHRangeSlider */ = {
 			isa = PBXGroup;
 			children = (
-				BDBEB39F1E06608900FE2D6F /* NHRangeSliderView.swift */,
-				BDBEB3A01E06608900FE2D6F /* NHRangeSlider.swift */,
+				AF6E9A312707653B00FAF57C /* NHRangeSlider.swift */,
+				AF6E9A322707653B00FAF57C /* NHRangeSliderView.swift */,
 				BDBEB3881E06606100FE2D6F /* NHRangeSlider.h */,
 				BDBEB3891E06606100FE2D6F /* Info.plist */,
 			);
@@ -155,7 +155,7 @@
 					BDBEB3841E06606100FE2D6F = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = NKN6QECX9M;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Automatic;
 					};
 					BDBEB38D1E06606100FE2D6F = {
@@ -170,6 +170,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = BDBEB37B1E06606100FE2D6F;
@@ -205,8 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDBEB3A21E06608900FE2D6F /* NHRangeSlider.swift in Sources */,
-				BDBEB3A11E06608900FE2D6F /* NHRangeSliderView.swift in Sources */,
+				AF6E9A332707653B00FAF57C /* NHRangeSlider.swift in Sources */,
+				AF6E9A342707653B00FAF57C /* NHRangeSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +347,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -367,7 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ngohung.NHRangeSlider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
